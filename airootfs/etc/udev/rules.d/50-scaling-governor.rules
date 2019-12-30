@@ -1,0 +1,1 @@
+SUBSYSTEM=="module", ACTION=="add", KERNEL=="acpi_cpufreq", RUN+=" /bin/sh -c ' echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor && echo performance > /sys/devices/system/cpu/cpufreq/policy1/scaling_governor ' "
