@@ -45,15 +45,16 @@ tree
 
 ## audio
 #linux-rt ## see README
-#qjackctl
-#hydrogen
-#guitarix
-#audacity
-#pavucontrol
-#pulseaudio-alsa
-#alsa-utils
-#pulseaudio
-#ffmpeg
+qjackctl
+hydrogen
+guitarix
+audacity
+pavucontrol
+pulseaudio-alsa
+pulseaudio-jack
+alsa-utils
+pulseaudio
+ffmpeg
 
 ## graphics
 gimp

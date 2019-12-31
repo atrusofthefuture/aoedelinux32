@@ -111,7 +111,11 @@ make_customize_airootfs() {
 
 #    curl -o ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 'https://git.archlinux32.org/archlinux32/packages/raw/branch/master/core/pacman-mirrorlist/mirrorlist'
 
+## repair broken script above
     cp /etc/pacman.d/mirrorlist ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 
+
+# custom for legacy wireless firmware
+    cp -R /lib/firmware/b43* ${work_dir}/${arch}/airootfs/lib/firmware/
 
     lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Installation_Guide?action=render' >> ${work_dir}/${arch}/airootfs/root/install.txt
 
