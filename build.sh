@@ -114,9 +114,6 @@ make_customize_airootfs() {
 ## repair broken script above
     cp /etc/pacman.d/mirrorlist ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 
 
-# custom for legacy wireless firmware
-    cp -R /lib/firmware/b43* ${work_dir}/${arch}/airootfs/lib/firmware/
-
     lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Installation_Guide?action=render' >> ${work_dir}/${arch}/airootfs/root/install.txt
 
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman-${arch}.conf" -D "${install_dir}" -r '/root/customize_airootfs.sh' run

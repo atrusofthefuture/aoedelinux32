@@ -11,6 +11,7 @@ xf86-video-nouveau
 mesa
 
 ## extra utilities
+pass
 firefox
 openresolv
 traceroute

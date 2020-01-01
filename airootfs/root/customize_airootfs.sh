@@ -25,7 +25,9 @@ systemctl set-default multi-user.target
 ### CUSTOMIZATIONS
 
 ## create sudo group
-#groupadd sudo
+if [[ -z $(grep sudo /etc/group) ]]; then
+	groupadd sudo
+fi
 
 ## create user "arch" and add to useful groups (esp. sudo since we locked root above)
 ## sets default password to "live"
