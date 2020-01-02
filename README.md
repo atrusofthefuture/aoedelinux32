@@ -33,8 +33,10 @@ If you have >4GB of RAM, consider inserting 'copytoram=y' into the kernel parame
 
 <h3>TROUBLESHOOTING</h3>
 My build was interrupted, and I don't want to reinstall the whole filesystem or start from scratch<br>
-  -- remove the files ending in ".build" from the "work" directory<br>
-  -- modify the pacstrap script (`which pacstrap` for path) and add "--if-needed" flag to call to pacstrap ## check notes on this detail
+  -- remove the files starting with "build" from the "work" directory<br>
+  -- modify the pacstrap script (`which pacstrap` for path) and add "--needed" flag to call to pacstrap ## check notes on this detail
+  
+  `if ! unshare --fork --pid pacman --ignore adljack --ignore mixxx --needed -r "$newroot" $pacmode "${pacman_args[@]}"; then`
 
 See [here](https://wiki.archlinux.org/index.php/archiso) for more information
 
