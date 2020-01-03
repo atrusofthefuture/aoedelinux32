@@ -6,11 +6,15 @@ lxde
 openbox
 xorg-xinit
 xorg
+xorg-drivers
 xterm
 xf86-video-nouveau
 mesa
 
 ## extra utilities
+networkmanager
+networkmanager-openvpn
+mlocate
 pass
 firefox
 openresolv
