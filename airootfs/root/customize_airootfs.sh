@@ -19,10 +19,13 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service ufw.service
+systemctl enable pacman-init.service choose-mirror.service ufw.service NetworkManager.service
 systemctl set-default multi-user.target
 
 ### CUSTOMIZATIONS
+ufw default deny incoming
+sed -i '/icmp/s/ACCEPT/DROP/' /etc/ufw/before.rules
+sed -i '/icmp/s/ACCEPT/DROP/' /etc/ufw/before6.rules
 
 ## create sudo group
 if [[ -z $(grep sudo /etc/group) ]]; then

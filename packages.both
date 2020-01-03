@@ -14,6 +14,7 @@ mesa
 ## extra utilities
 networkmanager
 networkmanager-openvpn
+network-manager-applet
 mlocate
 pass
 firefox
