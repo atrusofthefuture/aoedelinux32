@@ -12,6 +12,7 @@ xf86-video-nouveau
 mesa
 
 ## extra utilities
+dnscrypt-proxy
 networkmanager
 networkmanager-openvpn
 network-manager-applet
