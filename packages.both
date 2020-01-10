@@ -263,15 +263,15 @@ qmidinet
 qmidiroute
 qsampler
 qsynth
-qtractor
+#qtractor
 qxgedit
 realtime-privileges
 rev-plugins
-rosegarden
+#rosegarden
 samplv1
 sc3-plugins
 setbfree
-sherlock.lv2
+#sherlock.lv2
 snd
 solfege
 sonic-pi
@@ -282,8 +282,8 @@ supercollider
 sweep
 swh-plugins
 synthv1
-tap-plugins
-tidalcycles
+#tap-plugins
+#tidalcycles
 timidity++
 vamp-aubio-plugins
 vamp-plugin-sdk
@@ -309,4 +309,4 @@ zita-njbridge
 zita-rev1
 zynaddsubfx
 
-soundfont-fluid
+#soundfont-fluid

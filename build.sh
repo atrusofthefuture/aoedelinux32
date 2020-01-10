@@ -112,9 +112,13 @@ make_customize_airootfs() {
 #    curl -o ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 'https://git.archlinux32.org/archlinux32/packages/raw/branch/master/core/pacman-mirrorlist/mirrorlist'
 
 ## repair broken script above
-    cp /etc/pacman.d/mirrorlist ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 
+#    cp /etc/pacman.d/mirrorlist ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 
 
     lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Installation_Guide?action=render' >> ${work_dir}/${arch}/airootfs/root/install.txt
+
+    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Offline_installation?action=render' >> ${work_dir}/x86_64/airootfs/root/offline-install.txt    
+
+    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Professional_audio?action=render' > ${work_dir}/x86_64/airootfs/root/pro-audio.txt
 
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman-${arch}.conf" -D "${install_dir}" -r '/root/customize_airootfs.sh' run
     rm ${work_dir}/${arch}/airootfs/root/customize_airootfs.sh

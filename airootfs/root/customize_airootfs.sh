@@ -10,6 +10,7 @@ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 usermod -s /usr/bin/zsh root
 cp -aT /etc/skel/ /root/
 chmod 700 /root
+usermod -L root
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
@@ -19,13 +20,16 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-systemctl enable pacman-init.service choose-mirror.service ufw.service NetworkManager.service dnscrypt-proxy.socket
+systemctl enable pacman-init.service choose-mirror.service ufw.service NetworkManager.service dnscrypt-proxy.service
 systemctl set-default multi-user.target
 
 ### CUSTOMIZATIONS
 ufw default deny incoming
 sed -i '/icmp/s/ACCEPT/DROP/' /etc/ufw/before.rules
 sed -i '/icmp/s/ACCEPT/DROP/' /etc/ufw/before6.rules
+ufw enable
+
+echo [main]\ndhcp=dhcpcd > /etc/NetworkManager/NetworkManager.conf
 
 ## create sudo group
 if [[ -z $(grep sudo /etc/group) ]]; then

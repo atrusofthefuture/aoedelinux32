@@ -1,0 +1,46 @@
+##
+## Arch Linux 32 repository mirrorlist
+## Generated on 2019-12-02
+##
+
+## Belarus
+#Server = http://mirror.datacenter.by/pub/archlinux32/$arch/$repo/
+#Server = https://mirror.datacenter.by/pub/archlinux32/$arch/$repo/
+
+## France
+#Server = http://archlinux32.agoctrl.org/$arch/$repo/
+#Server = https://archlinux32.agoctrl.org/$arch/$repo/
+
+## Germany
+#Server = http://archlinux32.vollzornbrot.de/$arch/$repo/
+#Server = http://de.mirror.archlinux32.org/$arch/$repo/
+#Server = https://de.mirror.archlinux32.org/$arch/$repo/
+#Server = http://ger.mirror.archlinux32.org/$arch/$repo/
+#Server = https://ger.mirror.archlinux32.org/$arch/$repo/
+#Server = http://mirror.archlinux32.org/$arch/$repo/
+Server = https://mirror.archlinux32.org/$arch/$repo/
+#Server = http://mirror.archlinux32.oss/$arch/$repo/
+
+## India
+#Server = http://ind.mirror.archlinux32.org/$arch/$repo/
+#Server = https://ind.mirror.archlinux32.org/$arch/$repo/
+
+## Japan
+#Server = http://jpn.mirror.archlinux32.org/$arch/$repo/
+#Server = https://jpn.mirror.archlinux32.org/$arch/$repo/
+
+## Russia
+#Server = http://mirror.yandex.ru/archlinux32/$arch/$repo/
+#Server = https://mirror.yandex.ru/archlinux32/$arch/$repo/
+
+## Singapore
+#Server = http://sgp.mirror.archlinux32.org/$arch/$repo/
+#Server = https://sgp.mirror.archlinux32.org/$arch/$repo/
+
+## Switzerland
+#Server = http://archlinux32.andreasbaumann.cc/$arch/$repo/
+#Server = https://archlinux32.andreasbaumann.cc/$arch/$repo/
+
+## United States
+#Server = http://mirror.math.princeton.edu/pub/archlinux32/$arch/$repo/
+#Server = https://mirror.math.princeton.edu/pub/archlinux32/$arch/$repo/

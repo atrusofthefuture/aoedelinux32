@@ -27,7 +27,7 @@
 ## The proxy will automatically pick the fastest, working servers from the list.
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-# server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
+ server_names = ['quad9-doh-ip4-nofilter-pri', 'quad9-doh-ip6-nofilter-pri']
 
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -135,12 +135,12 @@ keepalive = 30
 
 ## Log level (0-6, default: 2 - 0 is very verbose, 6 only contains fatal errors)
 
-# log_level = 2
+ log_level = 2
 
 
 ## log file for the application
 
-# log_file = '/var/log/dnscrypt-proxy/dnscrypt-proxy.log'
+ log_file = '/var/log/dnscrypt-proxy/dnscrypt-proxy.log'
 
 
 ## Use the system logger (syslog on Unix, Event Log on Windows)
@@ -157,12 +157,12 @@ cert_refresh_delay = 240
 ## This may improve privacy but can also have a significant impact on CPU usage
 ## Only enable if you don't have a lot of network load
 
-# dnscrypt_ephemeral_keys = false
+ dnscrypt_ephemeral_keys = true
 
 
 ## DoH: Disable TLS session tickets - increases privacy but also latency
 
-# tls_disable_session_tickets = false
+ tls_disable_session_tickets = true
 
 
 ## DoH: Use a specific cipher suite instead of the server preference
@@ -423,7 +423,7 @@ cache_neg_max_ttl = 600
 
   ## Path to the query log file (absolute, or relative to the same directory as the config file)
 
-  # file = '/var/log/dnscrypt-proxy/nx.log'
+   file = '/var/log/dnscrypt-proxy/nx.log'
 
 
   ## Query log format (currently supported: tsv and ltsv)
