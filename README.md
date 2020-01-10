@@ -5,8 +5,8 @@
 **The bulk of the modifications to the Arch-provided "archiso" releng (release engineering) scripts were taken from the Arch Wiki entry on [Professional Audio][1].**
 
 ### PREREQUISITES:
-1. \>5GB hard drive space
-2. A running Arch Linux instance with packages "arch-install-scripts" and "archiso" installed; can be a live USB system but keep in mind final builds are ~2GB in size and the intermediate build stage is larger
+1. 10GB hard drive space
+2. A running Arch Linux instance with packages "arch-install-scripts" and "archiso" installed; can be a live USB system but keep in mind final builds are ~2GB in size and the intermediate build stage is approx. 7GB. 
 
 ### BUILDING:
 
@@ -49,6 +49,7 @@ See [here](https://wiki.archlinux.org/index.php/archiso) for more information
 ### CONFIG TECHNICALS:
 As mentioned, the tweaks are specified in the [Professional Audio][1] article in the Arch Wiki, and the article is included in the /root directory by default
 
+Running diff on this repo against the package-maintainer's stock releng configuration will show where it has been customized. Minor changes have been made to "build.sh" and the bulk is found in airootfs/etc and airootfs/root/customize_airootfs.sh.
 
 
 [1]: https://wiki.archlinux.org/index.php/Professional_audio/
