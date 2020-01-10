@@ -5,7 +5,7 @@
 **The bulk of the modifications to the Arch-provided "archiso" releng (release engineering) scripts were taken from the Arch Wiki entry on [Professional Audio][1].**
 
 ### PREREQUISITES:
-1. >5GB hard drive space
+1. \>5GB hard drive space
 2. A running Arch Linux instance with packages "arch-install-scripts" and "archiso" installed; can be a live USB system but keep in mind final builds are ~2GB in size and the intermediate build stage is larger
 
 ### BUILDING:
@@ -15,10 +15,13 @@
 when the build is complete you will find a file named aoedelinux-<date>-i686.iso in the "out" directory at the project root
 
 #### Customization:
-Alternatve desktops may be desired, and in the future I may provide alternate package lists for this purpose. For the time being, you will need to remove (or comment out) references to LXDE packages and substitute your desired package group (i.e. gnome, xfce4, etc.). Package groups may be listed with command
+Alternatve desktops may be desired, and in the future I may provide alternate package lists for this purpose. For the time being, you will need to remove (or comment out) references to LXDE packages and substitute your desired package group (i.e. gnome, xfce4, etc.). Package groups may be listed with command:
+
   `$ pacman -Sg`
-Or list all member packages in a given group
-  `$ pacman -Sg gnome`
+
+Or list all member packages in a given group:
+
+`$ pacman -Sg gnome`
 
 ### RUNNING:
 copy .iso to a USB or DVD medium, or open in a virtual machine
@@ -28,7 +31,7 @@ to start the LXDE graphical desktop environment, execute:
 `$ startx`
 
 **Recommendations:
-If you have >4GB of RAM, consider inserting 'copytoram=y' into the kernel parameters at the bootloader screen. This command loads the entire image into RAM, which speeds up program execution at the cost of occupying a large portion of active memory. CPU performance may be improved at some cost to security by disabling mitigations with "mitigations=off". It is recommended to turn of wifi if interruptions to live audio capture occur.
+If you have >4GB of RAM, consider inserting 'copytoram=y' into the kernel parameters at the bootloader screen. This command loads the entire image into RAM, which speeds up program execution at the cost of occupying a large portion of active memory. CPU performance may be improved at some cost to security by disabling mitigations with "mitigations=off". It is recommended to turn of wifi if interruptions to live audio capture occur.**
 
 Audio:
   The JACK Audio Connection Kit is a popular routing backend for Linux audio and Aoede includes he qjackctl GUI interface; many audio apps will ask to start JACK, although they do not all require it
