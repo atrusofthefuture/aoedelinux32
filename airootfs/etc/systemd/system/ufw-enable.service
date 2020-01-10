@@ -1,0 +1,10 @@
+[Unit]
+Description=Deny incoming and enable ufw
+#ConditionKernelCommandLine=mirror
+
+[Service]
+Type=oneshot
+ExecStart=/etc/systemd/scripts/ufw-enable
+
+[Install]
+WantedBy=multi-user.target

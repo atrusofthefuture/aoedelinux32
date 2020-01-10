@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+ufw default deny incoming
+ufw enable

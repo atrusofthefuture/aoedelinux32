@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e -u
+set -o xtrace
 
 iso_name=aoedelinux
 iso_label="ARCH_$(date +%Y%m)"
@@ -116,9 +117,9 @@ make_customize_airootfs() {
 
     lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Installation_Guide?action=render' >> ${work_dir}/${arch}/airootfs/root/install.txt
 
-    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Offline_installation?action=render' >> ${work_dir}/x86_64/airootfs/root/offline-install.txt    
+    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Offline_installation?action=render' >> ${work_dir}/${arch}/airootfs/root/offline-install.txt    
 
-    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Professional_audio?action=render' > ${work_dir}/x86_64/airootfs/root/pro-audio.txt
+    lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Professional_audio?action=render' > ${work_dir}/${arch}/airootfs/root/pro-audio.txt
 
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman-${arch}.conf" -D "${install_dir}" -r '/root/customize_airootfs.sh' run
     rm ${work_dir}/${arch}/airootfs/root/customize_airootfs.sh
