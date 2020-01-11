@@ -14,7 +14,8 @@ chmod 700 /root
 usermod -L root
 
 sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
-sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
+sed -i "s/^Server/#Server/g" /etc/pacman.d/mirrorlist
+sed -i "21s/#Server/Server/" /etc/pacman.d/mirrorlist
 sed -i 's/#\(Storage=\)auto/\1volatile/' /etc/systemd/journald.conf
 
 sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf

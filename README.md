@@ -5,7 +5,7 @@
 **The bulk of the modifications to the Arch-provided "archiso" releng (release engineering) scripts were taken from the Arch Wiki entry on [Professional Audio][1].**
 
 ### PREREQUISITES:
-1. 10GB hard drive space
+1. ~11GB hard drive space
 2. A running Arch Linux instance with packages "arch-install-scripts" and "archiso" installed; can be a live USB system but keep in mind final builds are ~2GB in size and the intermediate build stage is approx. 7GB. 
 
 ### BUILDING:
