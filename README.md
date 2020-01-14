@@ -1,8 +1,10 @@
-# Development repository for Aoede Linux
+# Development repository for Aoede Linux 32-bit
 
 **Aoede Linux is an Arch Linux based audio engineering oriented distribution in the vein of the Ubuntu Studio, AV Linux, and KXStudio projects -- to name only a few of the inspirations for this project.**
 
 **The bulk of the modifications to the Arch-provided "archiso" releng (release engineering) scripts were taken from the Arch Wiki entry on [Professional Audio][1].**
+
+Note: This release is based on the derived work of the 32-bit Arch project archlinux32.org. It is not from the maintainers of the official Arch Linux project. For the 64-bit project see [Aoede Linux](https://github.com/atrusofthefuture/aoedelinux).
 
 ### PREREQUISITES:
 1. ~11GB hard drive space
@@ -31,7 +33,7 @@ to start the LXDE graphical desktop environment, execute:
 `$ startx`
 
 **Recommendations:
-If you have >4GB of RAM, consider inserting 'copytoram=y' into the kernel parameters at the bootloader screen. This command loads the entire image into RAM, which speeds up program execution at the cost of occupying a large portion of active memory. CPU performance may be improved at some cost to security by disabling mitigations with "mitigations=off". It is recommended to turn of wifi if interruptions to live audio capture occur.**
+If you have >4GB of RAM, consider inserting 'copytoram=y' into the kernel parameters at the bootloader screen. This command loads the entire image into RAM, which speeds up program execution at the cost of occupying a large portion of active memory. CPU performance may be improved at some cost to security by disabling mitigations with "mitigations=off". It is recommended to turn off wifi if interruptions to live audio capture occur.**
 
 Audio:
   The JACK Audio Connection Kit is a popular routing backend for Linux audio and Aoede includes he qjackctl GUI interface; many audio apps will ask to start JACK, although they do not all require it
@@ -40,9 +42,9 @@ Audio:
 ### TROUBLESHOOTING
 My build was interrupted, and I don't want to reinstall the whole filesystem or start from scratch<br>
   -- remove the files starting with "build" from the "work" directory<br>
-  -- modify the pacstrap script (`which pacstrap` for path) and add "--needed" flag to call to pacstrap ## check notes on this detail
+  -- modify the pacstrap script (`which pacstrap` for path) and add "--needed" flag to call to pacstrap
   
-  `if ! unshare --fork --pid pacman --ignore adljack --ignore mixxx --needed -r "$newroot" $pacmode "${pacman_args[@]}"; then`
+  `if ! unshare --fork --pid pacman --needed -r "$newroot" $pacmode "${pacman_args[@]}"; then`
 
 See [here](https://wiki.archlinux.org/index.php/archiso) for more information
 
