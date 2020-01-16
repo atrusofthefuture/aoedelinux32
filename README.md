@@ -53,5 +53,13 @@ As mentioned, the tweaks are specified in the [Professional Audio][1] article in
 
 Running diff on this repo against the package-maintainer's stock releng configuration will show where it has been customized. Minor changes have been made to "build.sh" and the bulk is found in airootfs/etc and airootfs/root/customize_airootfs.sh.
 
+#### Additional Notes:
+Several packages were excluded to save space in these preliminary builds, including:
+	rosegarden
+	qtractor
+	soundfont-fluid
+
+Also, as mentioned in the single open issue, I have not yet gotten to solving the issue with deps for adljack and mixxx. Expect to see this fixed shortly. Not a priority, as I find Mixxx near unusable.
+
 
 [1]: https://wiki.archlinux.org/index.php/Professional_audio/
