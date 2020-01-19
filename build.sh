@@ -4,7 +4,7 @@ set -e -u
 set -o xtrace
 
 iso_name=aoedelinux
-iso_label="ARCH_$(date +%Y%m)"
+iso_label="AOEDE_$(date +%Y%m)"
 iso_publisher="Aoede Linux <http://atrusofthefuture.github.io>"
 iso_application="Aoede Linux Live/Rescue CD"
 iso_version=$(date +%Y.%m.%d)
@@ -258,6 +258,8 @@ while getopts 'N:V:L:P:A:D:w:o:g:vh' arg; do
     esac
 done
 
+#aplay ./bel.wav
+
 mkdir -p ${work_dir}
 
 run_once make_pacman_conf
@@ -291,3 +293,5 @@ for arch in i686; do
 done
 
 run_once make_iso
+
+#aplay ./bel.wav

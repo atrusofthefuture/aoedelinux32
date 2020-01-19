@@ -1,6 +1,6 @@
 # Development repository for Aoede Linux 32-bit
 
-**Aoede Linux is an Arch Linux based audio engineering oriented distribution in the vein of the Ubuntu Studio, AV Linux, and KXStudio projects -- to name only a few of the inspirations for this project.**
+**Aoede Linux is an Arch Linux-based audio engineering-oriented Linux/GNU OS distribution in the spirit of the Ubuntu Studio, AV Linux, and KXStudio projects.**
 
 **The bulk of the modifications to the Arch-provided "archiso" releng (release engineering) scripts were taken from the Arch Wiki entry on [Professional Audio][1].**
 
