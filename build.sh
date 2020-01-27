@@ -11,7 +11,10 @@ iso_version=$(date +%Y.%m.%d)
 install_dir=arch
 work_dir=work
 out_dir=out
-gpg_key=
+
+# set gpg_key variable to sign the airootfs.sfs file
+# example: 
+# gpg_key="rpg89@keemail.me"
 
 arch=$(uname -m)
 verbose=""
@@ -112,7 +115,7 @@ make_customize_airootfs() {
 
     cp ${script_path}/pacman.conf ${work_dir}/${arch}/airootfs/etc
 
-    curl -o ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist 'https://archlinux32.org/mirrorlist/?country=all&protocol=http&protocol=https'
+    cp $(realpath scripts/mirrorlist) ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist
 
     lynx -dump -nolist 'https://wiki.archlinux.org/index.php/Installation_Guide?action=render' >> ${work_dir}/${arch}/airootfs/root/install.txt
 

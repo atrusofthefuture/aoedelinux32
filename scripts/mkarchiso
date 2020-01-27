@@ -21,7 +21,7 @@ sfs_mode="sfs"
 sfs_comp="xz"
 gpg_key=
 
-pacstrap=$(realpath scripts/mkarchiso)
+pacstrap=$(realpath scripts/pacstrap))
 
 # Show an INFO message
 # $1: message string
