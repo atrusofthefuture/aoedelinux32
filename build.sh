@@ -65,7 +65,6 @@ make_pacman_conf() {
     sed -r "s|^#?\\s*CacheDir.+|CacheDir = $(echo -n ${_cache_dirs[@]})|g" ${script_path}/pacman.conf > ${work_dir}/pacman-x86_64.conf
     sed '
       s@/var/cache/pacman/pkg/@/var/cache/archbuild32/@
-      s@Include = /etc/pacman\.d/mirrorlist$@\032@
     ' ${work_dir}/pacman-x86_64.conf > ${work_dir}/pacman-i686.conf
 }
 
