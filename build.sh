@@ -15,6 +15,7 @@ out_dir=out
 # set gpg_key variable to sign the airootfs.sfs file
 # example: 
 # gpg_key="rpg89@keemail.me"
+gpg_key=""
 
 arch=$(uname -m)
 verbose=""
