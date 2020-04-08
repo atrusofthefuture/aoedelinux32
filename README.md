@@ -6,6 +6,8 @@
 
 Note: This release is based on the derived work of the 32-bit Arch project archlinux32.org. It is not from the maintainers of the official Arch Linux project. For the 64-bit project see [Aoede Linux](https://github.com/atrusofthefuture/aoedelinux).
 
+I RECOMMEND THAT YOU USE THE 64-BIT IMPLEMENTATION UNLESS YOU HAVE A REASON TO USE THIS ONE.
+
 ### PREREQUISITES:
 1. ~11GB hard drive space
 2. A running Arch Linux instance with packages "arch-install-scripts" and "archiso" installed; can be a live USB system but keep in mind final builds are ~2GB in size and the intermediate build stage is approx. 7GB. 
